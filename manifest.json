@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "instant_translate",
+    "description": "Instant Translation Extension",
+    "version": "1.0",
+    "icons": {
+      "512": "logo.png",
+      "1024": "logo.png"
+    },
+    "permissions": [
+    "clipboardRead","clipboardWrite","storage"],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "logo.png"
+      },
+    "content_scripts":[{
+      "js":["script.js"],
+      "matches":["https://www.youtube.com/*","https://www.amazon.in/*","https://www.google.com/*","https://web.whatsapp.com/*"],
+      "type": "module"
+    }]
+    
+  }
