@@ -8,13 +8,19 @@ var state={0:"#ff7676",1:"#acfbb6"}
 
 // chrome.storage.local.clear()
 chrome.storage.local.get(["options"]).then((result)=>{
-    
-    options_selected = result["options"]
-    site_option_whatsapp.style.backgroundColor = state[options_selected["whatsapp"]]
-    site_option_google.style.backgroundColor = state[options_selected["google"]]
+    if(result != undefined){
+        options_selected = result["options"]
+        console.log("initial state: ",result["options"])
+        site_option_whatsapp.style.backgroundColor = state[options_selected["whatsapp"]]
+        site_option_google.style.backgroundColor = state[options_selected["google"]]
+    }
+    else{
+        options_selected= {"whatsapp":0,"amazon":0,"youtube":0,"google":0}
+    }
 })
 
 const proxy_handler = {set(target,property,value){
+    console.log("property name: ",property)
     options_selected[property] = value
     chrome.storage.local.set({"options":options_selected})
 
