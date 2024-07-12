@@ -3,20 +3,19 @@
     "name": "instant_translate",
     "description": "Instant Translation Extension",
     "version": "1.0",
-    "icons": {
-      "512": "logo.png",
-      "1024": "logo.png"
-    },
     "permissions": [
     "clipboardRead","clipboardWrite","storage"],
+    "web_accessible_resources": [{
+      "resources":["Assets/ssMaCVm.jpg","Assets/birb.jpg"],
+      "matches": ["https://web.whatsapp.com/*"]
+    }],
     "action": {
-      "default_popup": "index.html",
-      "default_icon": "logo.png"
+      "default_popup": "src/index.html",
+      "default_icon": "Assets/logo.png"
       },
     "content_scripts":[{
-      "js":["script.js"],
-      "matches":["https://www.youtube.com/*","https://www.amazon.in/*","https://www.google.com/*","https://web.whatsapp.com/*"],
-      "type": "module"
+      "js":["scripts/content_script_1.js"],
+      "matches":["https://www.youtube.com/*","https://www.amazon.in/*","https://www.google.com/*","https://web.whatsapp.com/*"]
     }]
-    
+     
   }

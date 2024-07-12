@@ -1,0 +1,141 @@
+/* Global Styles */
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+.logo-text {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hero Section */
+
+.hero {
+    background-color: #fff;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    padding: 15px 30px;
+    background-color: #0070c9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #005192;
+}
+
+/* About Section */
+
+.about-section {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.donate-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0070c9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.donate-link:hover {
+    background-color: #005192;
+}
+
+.lynx{
+    position: absolute;
+    right: +5vw;
+    height: 50px;
+    width: 50px;
+    font-size: 3vw;
+    color: #333;
+}

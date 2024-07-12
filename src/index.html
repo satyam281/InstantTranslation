@@ -1,0 +1,133 @@
+<html>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 420px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(6, 63, 63);
+        }
+
+        .header-text{
+            font-size: 34;
+            color: white;
+        }
+
+        .main-body{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+        .option-group{
+            font-size: 22;
+            margin: 5px;
+            background: rgba(47, 44, 44, 0.237);
+            padding: 5px;
+        }
+
+        .option:hover{
+            background: rgba(107, 176, 176, 0.777) ;
+        }
+
+        .language-selection{
+            display: flex;
+            flex-direction: row;
+        }
+        .option{
+            font-size: 18;
+        }
+        .text{
+            font-size: 18;
+        }
+
+        .image{
+            display: flex;
+            justify-content: center;
+        }
+
+        .google_dialog{
+            background-color: rgb(28, 28, 28);
+        }
+
+        .custom_checkbox{
+            height: 20px;
+            width: 20px;
+            background-color: #ff7676;
+            border: 1px solid black;
+        }
+
+    </style>
+    
+    
+    <body>
+        <div class="header">
+            <div class="header-text">Instant Translate</div>
+        </div>
+
+        <div class="main-body">
+            <div class="option-group"> Translate on
+                <div class="option" >
+                     <button class="custom_checkbox" id="whatsapp"></button>
+                     <label>whatsapp</label>
+                </div>
+                <div class="option" >
+                    <button class="custom_checkbox" id="youtube"></button>
+                     <label>youtube</label>
+                </div>
+                <div class="option" >
+                    <button class="custom_checkbox" id="amazon"></button>
+                     <label>amazon</label>
+                </div>
+                <div class="option" >
+                    <button class="custom_checkbox" id="google"></button>
+                     <label>google</label>
+                    <!-- <input type="checkbox" onclick="sendMessage"> Google -->
+                </div>
+            </div>
+
+            <div class="option-group"> Langauge selection
+                <div class="option">
+                    <div class="language-selection">
+                        <div class="text">source langauge: </div>
+                        <div class="option">
+                            <input type="checkbox"> Hindi 
+                        </div>
+                        <div class="option">
+                            <input type="checkbox"> English 
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="language-selection">
+                        <div class="text">Target langauge: </div>
+                        <div class="option">
+                            <input type="checkbox"> Hindi 
+                        </div>
+                        <div class="option">
+                            <input type="checkbox"> English 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="image"> <a href="documentation"><img src="../Assets/logo.jpg" height="90px" width="90px"> </a> </div>
+        </div> 
+
+    
+    </body>
+    <script src="../scripts/popup.js"></script>    
+</html>
