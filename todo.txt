@@ -1,6 +1,14 @@
 1. intergration with trained mode - [ : ( ]
 
-2. save state of popup menu options in local storage to persist the option selection - [ : ( ]
+2. save state of popup menu options in local storage to persist the option selection - [ : D ]
 
 3. fix extension not working on whatsapp - [ done ]
+
+4. Webpage text translation 
+
+5. Customization options
+
+6. Draggable dialog box
+
+
 

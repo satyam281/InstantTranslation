@@ -53,6 +53,33 @@ function toggle_google(){
 
            //dialog box creation and styling
            var google_dialog = document.createElement("dialog")
+        //    var draggable = document.getElementById('draggable');
+
+           var posX = 0,
+               posY = 0,
+               mouseX = 0,
+               mouseY = 0;
+           
+           google_dialog.addEventListener('mousedown', mouseDown, false);
+           window.addEventListener('mouseup', mouseUp, false);
+           
+           function mouseDown(e) {
+             e.preventDefault();
+             posX = e.clientX - google_dialog.offsetLeft;
+             posY = e.clientY - google_dialog.offsetTop;
+             window.addEventListener('mousemove', moveElement, false);
+           }
+           
+           function mouseUp() {
+             window.removeEventListener('mousemove', moveElement, false);
+           }
+           
+           function moveElement(e) {
+             mouseX = e.clientX - posX;
+             mouseY = e.clientY - posY;
+             google_dialog.style.left = mouseX + 'px';
+             google_dialog.style.top = mouseY + 'px';
+           }
            google_dialog.className = "google_dialog"
            google_dialog.style.top = (search_bar_pos.top-70) +"px"
            google_dialog.style.left = search_bar_pos.left+"px"
@@ -71,7 +98,7 @@ function toggle_google(){
            logo.style.width = "40px"
            logo.style.height = "40px"
            logo.style.margin = "0px"
-           logo.draggable = false
+           logo.google_dialog = false
            google_dialog.appendChild(logo)
            
            
